@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - BeanSensei</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename ='style.css')}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('homepage')}}">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="{{ url_for('contact')}}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>About</h1>
+            <img src="../static/image2.jpeg" alt="Beans image">
+            <p>The project aims to develop a sophisticated plant seed classification system by harnessing the power of machine learning algorithms and image analysis techniques. This system is designed to efficiently and accurately classify different types of beans based on comprehensive analysis of morphological features in bean images. These features include shape, size, texture, color, and pattern. By analyzing these features, the system can differentiate between various bean varieties, such as pinto beans, black beans, kidney beans, and more.</p>
+            <p>Moreover, the dataset used for training and testing the system includes meticulously labeled samples of various bean types, enabling the system to learn and recognize unique characteristics across different categories. Through the integration of machine learning models and image analysis techniques, this project has the potential to significantly enhance the accuracy and efficiency of bean classification processes.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BeanSensei. All rights reserved.</p>
+    </footer>
+</body>
+</html>

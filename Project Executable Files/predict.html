@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction of Dry Beans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header, .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header a, .footer a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .form-group {
+            width: 48%;
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <a href="{{ url_for('homepage') }}">Home</a>
+    <a href="{{ url_for('aboutpage') }}">About</a>
+    <a href="#">Predict</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+</div>
+
+<div class="container">
+    <h1>PREDICTION OF DRY BEANS</h1>
+    <p>Please enter the required input fields for classifying Dry Beans!</p>
+    <form method="post" action="{{ url_for('predict') }}">
+        <div class="form-group">
+            <label for="area">Area:</label>
+            <input type="text" id="area" name="Area">
+        </div>
+        <div class="form-group">
+            <label for="perimeter">Perimeter:</label>
+            <input type="text" id="perimeter" name="Perimeter">
+        </div>
+        <div class="form-group">
+            <label for="majorAxisLength">Major Axis Length:</label>
+            <input type="text" id="majorAxisLength" name="MajorAxisLength">
+        </div>
+        <div class="form-group">
+            <label for="minorAxisLength">Minor Axis Length:</label>
+            <input type="text" id="minorAxisLength" name="MinorAxisLength">
+        </div>
+        <div class="form-group">
+            <label for="aspectRatio">Aspect Ratio:</label>
+            <input type="text" id="aspectRatio" name="AspectRation">
+        </div>
+        <div class="form-group">
+            <label for="eccentricity">Eccentricity:</label>
+            <input type="text" id="eccentricity" name="Eccentricity">
+        </div>
+        <div class="form-group">
+            <label for="convexArea">Convex Area:</label>
+            <input type="text" id="convexArea" name="ConvexArea">
+        </div>
+        <div class="form-group">
+            <label for="equivDiameter">Equiv Diameter:</label>
+            <input type="text" id="equivDiameter" name="EquivDiameter">
+        </div>
+        <div class="form-group">
+            <label for="extent">Extent:</label>
+            <input type="text" id="extent" name="Extent">
+        </div>
+        <div class="form-group">
+            <label for="solidity">Solidity:</label>
+            <input type="text" id="solidity" name="Solidity">
+        </div>
+        <div class="form-group">
+            <label for="roundness">Roundness:</label>
+            <input type="text" id="roundness" name="roundness">
+        </div>
+        <div class="form-group">
+            <label for="compactness">Compactness:</label>
+            <input type="text" id="compactness" name="Compactness">
+        </div>
+        <div class="form-group">
+            <label for="shapeFactor1">Shape Factor 1:</label>
+            <input type="text" id="shapeFactor1" name="ShapeFactor1">
+        </div>
+        <div class="form-group">
+            <label for="shapeFactor2">Shape Factor 2:</label>
+            <input type="text" id="shapeFactor2" name="ShapeFactor2">
+        </div>
+        <div class="form-group">
+            <label for="shapeFactor3">Shape Factor 3:</label>
+            <input type="text" id="shapeFactor3" name="ShapeFactor3">
+        </div>
+        <div class="form-group">
+            <label for="shapeFactor4">Shape Factor 4:</label>
+            <input type="text" id="shapeFactor4" name="ShapeFactor4">
+        </div>
+        <div class="form-group" style="width: 100%;">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+     </form>
+</div>
+
+</body>
+</html>

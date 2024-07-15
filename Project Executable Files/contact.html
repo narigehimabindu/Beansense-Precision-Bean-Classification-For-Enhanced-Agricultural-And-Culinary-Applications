@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style1.css')}}">
+</head>
+<body>
+    <header>
+        <h1>BeanSense!</h1>
+        <nav>
+            <ul>
+                <a href="{{ url_for('homepage')}}">Home</a>
+                <a href="{{ url_for('aboutpage')}}">About</a>
+                <a href="#">Contact</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="address">
+                    <h3>Our Address</h3>
+                    <p>Warangal, bollikunta</p>
+                </div>
+                <div class="email">
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:info@example.com">info@example.com</a></p>
+                    <p><a href="mailto:contact@example.com">contact@example.com</a></p>
+                </div>
+                <div class="phone">
+                    <h3>Call Us</h3>
+                    <p>92 5559 5486 58</p>
+                    <p>90 6678 2544 41</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="submit_form.php" method="post">
+                    <label for="Name">Name:</label>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <label for="email">email</label>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <label for="subject">subject:</label>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <label for="message">message:</label>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Copyright BeanSense All Rights Reserved</p>
+    </footer>
+</body>
+</html
